@@ -1,0 +1,24 @@
+{
+    "versushipsterApp": {
+        "program" : {
+            "home": {
+                "title": "Programs",
+                "createLabel": "Vytvořit Program",
+                "createOrEditLabel": "Vytvořit nebo upravit Program",
+                "search": "Vyhledat Program"
+            },
+            "created": "Byl vytvořen potomek entity Program s identifikátorem {{ param }}",
+            "updated": "Potomek entity Program s identifikátorem {{ param }} byl upravený.",
+            "deleted": "Potomek entity Program s identifikátorem {{ param }} bol smazaný.",
+            "delete": {
+                "question": "Jste si jisti, že chcete smazat Program {{ id }}?"
+            },
+            "detail": {
+                "title": "Program"
+            },
+            "active": "Active",
+            "composition": "Composition",
+            "name": "Name"
+        }
+    }
+}

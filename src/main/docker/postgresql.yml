@@ -1,0 +1,12 @@
+version: '2'
+services:
+    versushipster-postgresql:
+        container_name: versushipster-postgresql
+        image: postgres:9.5.2
+        # volumes:
+        #     - ~/volumes/jhipster/versushipster/postgresql/:/var/lib/postgresql/
+        environment:
+            - POSTGRES_USER=versushipster
+            - POSTGRES_PASSWORD=
+        ports:
+            - 5432:5432

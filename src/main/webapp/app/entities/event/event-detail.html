@@ -1,0 +1,52 @@
+
+<div>
+    <h2><span translate="versushipsterApp.event.detail.title">Event</span> {{vm.event.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span translate="versushipsterApp.event.dateTime">Date Time</span></dt>
+        <dd>
+            <span>{{vm.event.dateTime | date:'medium'}}</span>
+        </dd>
+        <dt><span translate="versushipsterApp.event.type">Type</span></dt>
+        <dd>
+            <span translate="{{'versushipsterApp.EventType.' + vm.event.type}}">{{vm.event.type}}</span>
+        </dd>
+        <dt><span translate="versushipsterApp.event.publicEvent">Public Event</span></dt>
+        <dd>
+            <span>{{vm.event.publicEvent}}</span>
+        </dd>
+        <dt><span translate="versushipsterApp.event.publishProgram">Publish Program</span></dt>
+        <dd>
+            <span>{{vm.event.publishProgram}}</span>
+        </dd>
+        <dt><span translate="versushipsterApp.event.poster">Poster</span></dt>
+        <dd>
+            <span>{{vm.event.poster}}</span>
+        </dd>
+        <dt><span translate="versushipsterApp.event.program">Program</span></dt>
+        <dd>
+            <span ng-repeat="program in vm.event.programs">
+                <a ui-sref="composition-detail({id: {{program.id}}})">{{program.id}}</a>{{$last ? '' : ', '}}
+            </span>
+        </dd>
+        <dt><span translate="versushipsterApp.event.title">Title</span></dt>
+        <dd>
+            <a ui-sref="translation-key-detail({id:vm.event.title.id})">{{vm.event.title.key}}</a>
+        </dd>
+        <dt><span translate="versushipsterApp.event.place">Place</span></dt>
+        <dd>
+            <a ui-sref="translation-key-detail({id:vm.event.place.id})">{{vm.event.place.key}}</a>
+        </dd>
+        <dt><span translate="versushipsterApp.event.description">Description</span></dt>
+        <dd>
+            <a ui-sref="translation-key-detail({id:vm.event.description.id})">{{vm.event.description.key}}</a>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            onclick="window.history.back()"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+</div>

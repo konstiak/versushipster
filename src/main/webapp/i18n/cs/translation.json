@@ -1,0 +1,24 @@
+{
+    "versushipsterApp": {
+        "translation" : {
+            "home": {
+                "title": "Translations",
+                "createLabel": "Vytvořit Translation",
+                "createOrEditLabel": "Vytvořit nebo upravit Translation",
+                "search": "Vyhledat Translation"
+            },
+            "created": "Byl vytvořen potomek entity Translation s identifikátorem {{ param }}",
+            "updated": "Potomek entity Translation s identifikátorem {{ param }} byl upravený.",
+            "deleted": "Potomek entity Translation s identifikátorem {{ param }} bol smazaný.",
+            "delete": {
+                "question": "Jste si jisti, že chcete smazat Translation {{ id }}?"
+            },
+            "detail": {
+                "title": "Translation"
+            },
+            "locale": "Locale",
+            "translation": "Translation",
+            "key": "Key"
+        }
+    }
+}

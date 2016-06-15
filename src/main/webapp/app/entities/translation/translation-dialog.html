@@ -1,0 +1,60 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()" show-validation>
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myTranslationLabel" translate="versushipsterApp.translation.home.createOrEditLabel">Create or edit a Translation</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" ng-show="vm.translation.id">
+            <label for="id" translate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.translation.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="versushipsterApp.translation.locale" for="field_locale">Locale</label>
+            <select class="form-control" name="locale" ng-model="vm.translation.locale" id="field_locale" required>
+                <option value="EN" translate="versushipsterApp.LocaleType.EN">EN</option>
+                <option value="DE" translate="versushipsterApp.LocaleType.DE">DE</option>
+                <option value="FR" translate="versushipsterApp.LocaleType.FR">FR</option>
+                <option value="CS" translate="versushipsterApp.LocaleType.CS">CS</option>
+                <option value="SK" translate="versushipsterApp.LocaleType.SK">SK</option>
+            </select>
+            <div ng-show="editForm.locale.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.locale.$error.required" translate="entity.validation.required">
+                    This field is required.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="versushipsterApp.translation.translation" for="field_translation">Translation</label>
+            <input type="text" class="form-control" name="translation" id="field_translation"
+                    ng-model="vm.translation.translation"
+                    required />
+            <div ng-show="editForm.translation.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.translation.$error.required" translate="entity.validation.required">
+                    This field is required.
+                </p>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label translate="versushipsterApp.translation.key" for="field_key">Key</label>
+            <select class="form-control" id="field_key" name="key" ng-model="vm.translation.key" ng-options="translationKey as translationKey.key for translationKey in vm.translationkeys track by translationKey.id">
+                <option value=""></option>
+            </select>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

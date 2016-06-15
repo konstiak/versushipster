@@ -1,0 +1,24 @@
+{
+    "versushipsterApp": {
+        "composer" : {
+            "home": {
+                "title": "Composers",
+                "createLabel": "Create a new Composer",
+                "createOrEditLabel": "Create or edit a Composer",
+                "search": "Search for Composer"
+            },
+            "created": "A new Composer is created with identifier {{ param }}",
+            "updated": "A Composer is updated with identifier {{ param }}",
+            "deleted": "A Composer is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Composer {{ id }}?"
+            },
+            "detail": {
+                "title": "Composer"
+            },
+            "name": "Name",
+            "composition": "Composition",
+            "description": "Description"
+        }
+    }
+}

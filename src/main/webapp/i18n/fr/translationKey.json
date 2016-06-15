@@ -1,0 +1,23 @@
+{
+    "versushipsterApp": {
+        "translationKey" : {
+            "home": {
+                "title": "TranslationKeys",
+                "createLabel": "Créer un nouveau Translation Key",
+                "createOrEditLabel": "Créer ou éditer un Translation Key",
+                "search": "Recherche pour Translation Key"
+            },
+            "created": "Un nouveau Translation Key a été créé avec l'identifiant {{ param }}",
+            "updated": "Le Translation Key avec l'identifiant {{ param }} a été mis à jour",
+            "deleted": "Le Translation Key avec l'identifiant {{ param }} a été supprimé",
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Translation Key {{ id }} ?"
+            },
+            "detail": {
+                "title": "Translation Key"
+            },
+            "key": "Key",
+            "translation": "Translation"
+        }
+    }
+}

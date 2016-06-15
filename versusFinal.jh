@@ -1,0 +1,126 @@
+enum LocaleType {
+    EN, DE, FR, CS, SK
+}
+
+entity TranslationKey {
+	key String required,
+}
+
+entity Translation {
+	locale LocaleType required,
+    translation String required
+}
+
+entity Composer {
+	name String required
+}
+
+entity Composition {
+	title String required,
+  	originalLyrics String
+}
+
+entity Program {
+	active Boolean
+}
+
+entity Event {
+    dateTime ZonedDateTime required,
+    type EventType required,
+    publicEvent Boolean,
+    publishProgram Boolean,
+    poster String
+}
+
+enum EventType {
+	CONCERT, REHEARSAL, SUGGESTION
+}
+
+entity Member {
+	firstName String required,
+    secondName String required,
+    active Boolean,
+    voice VoiceType required,
+    photo String,
+    memberFrom LocalDate,
+    memberTo LocalDate
+}
+
+enum VoiceType {
+	SOPRANO,
+    MEZZOSOPRANO,
+    CONTRALTO,
+    ALTO,
+    COUNTERTENOR,
+    TENOR,
+    BARITONE,
+    BASS
+}
+
+entity Article {
+  	slug String required,
+}
+
+entity Video {
+	name String required,
+    url String
+}
+
+relationship OneToMany {
+	Composer{composition} to Composition{composer}
+}
+
+relationship ManyToMany {
+	Program{composition} to Composition{program}
+}
+
+relationship ManyToMany {
+	Event{program} to Composition{event}
+}
+
+relationship OneToMany {
+	Composition{video} to Video{composition}
+}
+
+relationship OneToMany {
+	TranslationKey{translation} to Translation{key(key)}
+}
+
+relationship OneToOne {
+	Composer{description(key)} to TranslationKey
+}
+
+relationship OneToOne {
+	Composition{lyricsTranslation(key)} to TranslationKey 
+}
+
+relationship OneToOne {
+	Event{title(key)} to TranslationKey
+}
+
+relationship OneToOne {
+    Event{place(key)} to TranslationKey
+}
+
+relationship OneToOne {
+    Event{description(key)} to TranslationKey
+}
+
+relationship OneToOne {
+    Member{description(key)} to TranslationKey
+}
+
+relationship OneToOne {
+	Article{title(key)} to TranslationKey
+}
+
+relationship OneToOne {
+	Article{content(key)} to TranslationKey
+}
+
+relationship OneToOne {
+	Program{name(key)} to TranslationKey
+}
+
+paginate Composition, Composer, Event, Video with infinite-scroll
+paginate Member, Article, Translation with pagination

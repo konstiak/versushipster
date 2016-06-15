@@ -1,0 +1,30 @@
+{
+    "versushipsterApp": {
+        "event" : {
+            "home": {
+                "title": "Events",
+                "createLabel": "Vytvořit Event",
+                "createOrEditLabel": "Vytvořit nebo upravit Event",
+                "search": "Vyhledat Event"
+            },
+            "created": "Byl vytvořen potomek entity Event s identifikátorem {{ param }}",
+            "updated": "Potomek entity Event s identifikátorem {{ param }} byl upravený.",
+            "deleted": "Potomek entity Event s identifikátorem {{ param }} bol smazaný.",
+            "delete": {
+                "question": "Jste si jisti, že chcete smazat Event {{ id }}?"
+            },
+            "detail": {
+                "title": "Event"
+            },
+            "dateTime": "Date Time",
+            "type": "Type",
+            "publicEvent": "Public Event",
+            "publishProgram": "Publish Program",
+            "poster": "Poster",
+            "program": "Program",
+            "title": "Title",
+            "place": "Place",
+            "description": "Description"
+        }
+    }
+}

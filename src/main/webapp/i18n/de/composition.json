@@ -1,0 +1,28 @@
+{
+    "versushipsterApp": {
+        "composition" : {
+            "home": {
+                "title": "Compositions",
+                "createLabel": "Composition erstellen",
+                "createOrEditLabel": "Composition erstellen oder bearbeiten",
+                "search": "Suche nach Composition"
+            },
+            "created": "Composition erstellt mit ID {{ param }}",
+            "updated": "Composition aktualisiert mit ID {{ param }}",
+            "deleted": "Composition gelöscht mit ID {{ param }}",
+            "delete": {
+                "question": "Soll Composition {{ id }} wirklich dauerhaft gelöscht werden?"
+            },
+            "detail": {
+                "title": "Composition"
+            },
+            "title": "Title",
+            "originalLyrics": "Original Lyrics",
+            "video": "Video",
+            "lyricsTranslation": "Lyrics Translation",
+            "composer": "Composer",
+            "program": "Program",
+            "event": "Event"
+        }
+    }
+}

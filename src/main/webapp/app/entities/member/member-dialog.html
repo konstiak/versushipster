@@ -1,0 +1,107 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()" show-validation>
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myMemberLabel" translate="versushipsterApp.member.home.createOrEditLabel">Create or edit a Member</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" ng-show="vm.member.id">
+            <label for="id" translate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.member.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="versushipsterApp.member.firstName" for="field_firstName">First Name</label>
+            <input type="text" class="form-control" name="firstName" id="field_firstName"
+                    ng-model="vm.member.firstName"
+                    required />
+            <div ng-show="editForm.firstName.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.firstName.$error.required" translate="entity.validation.required">
+                    This field is required.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="versushipsterApp.member.secondName" for="field_secondName">Second Name</label>
+            <input type="text" class="form-control" name="secondName" id="field_secondName"
+                    ng-model="vm.member.secondName"
+                    required />
+            <div ng-show="editForm.secondName.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.secondName.$error.required" translate="entity.validation.required">
+                    This field is required.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="versushipsterApp.member.active" for="field_active">Active</label>
+            <input type="checkbox" class="form-control" name="active" id="field_active"
+                    ng-model="vm.member.active"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="versushipsterApp.member.voice" for="field_voice">Voice</label>
+            <select class="form-control" name="voice" ng-model="vm.member.voice" id="field_voice" required>
+                <option value="SOPRANO" translate="versushipsterApp.VoiceType.SOPRANO">SOPRANO</option>
+                <option value="MEZZOSOPRANO" translate="versushipsterApp.VoiceType.MEZZOSOPRANO">MEZZOSOPRANO</option>
+                <option value="CONTRALTO" translate="versushipsterApp.VoiceType.CONTRALTO">CONTRALTO</option>
+                <option value="ALTO" translate="versushipsterApp.VoiceType.ALTO">ALTO</option>
+                <option value="COUNTERTENOR" translate="versushipsterApp.VoiceType.COUNTERTENOR">COUNTERTENOR</option>
+                <option value="TENOR" translate="versushipsterApp.VoiceType.TENOR">TENOR</option>
+                <option value="BARITONE" translate="versushipsterApp.VoiceType.BARITONE">BARITONE</option>
+                <option value="BASS" translate="versushipsterApp.VoiceType.BASS">BASS</option>
+            </select>
+            <div ng-show="editForm.voice.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.voice.$error.required" translate="entity.validation.required">
+                    This field is required.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="versushipsterApp.member.photo" for="field_photo">Photo</label>
+            <input type="text" class="form-control" name="photo" id="field_photo"
+                    ng-model="vm.member.photo"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="versushipsterApp.member.memberFrom" for="field_memberFrom">Member From</label>
+                <div class="input-group">
+                    <input id="field_memberFrom" type="text" class="form-control" name="memberFrom" uib-datepicker-popup="{{dateformat}}" ng-model="vm.member.memberFrom" is-open="vm.datePickerOpenStatus.memberFrom"
+                    />
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" ng-click="vm.openCalendar('memberFrom')"><i class="glyphicon glyphicon-calendar"></i></button>
+                    </span>
+                </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="versushipsterApp.member.memberTo" for="field_memberTo">Member To</label>
+                <div class="input-group">
+                    <input id="field_memberTo" type="text" class="form-control" name="memberTo" uib-datepicker-popup="{{dateformat}}" ng-model="vm.member.memberTo" is-open="vm.datePickerOpenStatus.memberTo"
+                    />
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" ng-click="vm.openCalendar('memberTo')"><i class="glyphicon glyphicon-calendar"></i></button>
+                    </span>
+                </div>
+        </div>
+
+        <div class="form-group">
+            <label translate="versushipsterApp.member.description" for="field_description">Description</label>
+            <select class="form-control" id="field_description" name="description" ng-model="vm.member.description" ng-options="translationKey as translationKey.key for translationKey in vm.descriptions | orderBy:'id' track by translationKey.id">
+                <option value=""></option>
+            </select>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

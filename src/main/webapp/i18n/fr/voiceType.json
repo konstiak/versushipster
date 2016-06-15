@@ -1,0 +1,15 @@
+{
+    "versushipsterApp": {
+        "VoiceType" : {
+            "null": "",
+            "SOPRANO": "SOPRANO",
+            "MEZZOSOPRANO": "MEZZOSOPRANO",
+            "CONTRALTO": "CONTRALTO",
+            "ALTO": "ALTO",
+            "COUNTERTENOR": "COUNTERTENOR",
+            "TENOR": "TENOR",
+            "BARITONE": "BARITONE",
+            "BASS": "BASS"
+        }
+    }
+}

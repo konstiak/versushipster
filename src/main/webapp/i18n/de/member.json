@@ -1,0 +1,29 @@
+{
+    "versushipsterApp": {
+        "member" : {
+            "home": {
+                "title": "Members",
+                "createLabel": "Member erstellen",
+                "createOrEditLabel": "Member erstellen oder bearbeiten",
+                "search": "Suche nach Member"
+            },
+            "created": "Member erstellt mit ID {{ param }}",
+            "updated": "Member aktualisiert mit ID {{ param }}",
+            "deleted": "Member gelöscht mit ID {{ param }}",
+            "delete": {
+                "question": "Soll Member {{ id }} wirklich dauerhaft gelöscht werden?"
+            },
+            "detail": {
+                "title": "Member"
+            },
+            "firstName": "First Name",
+            "secondName": "Second Name",
+            "active": "Active",
+            "voice": "Voice",
+            "photo": "Photo",
+            "memberFrom": "Member From",
+            "memberTo": "Member To",
+            "description": "Description"
+        }
+    }
+}

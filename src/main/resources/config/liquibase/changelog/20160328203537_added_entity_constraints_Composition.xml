@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+    <!--
+        Added the constraints for entity Composition.
+    -->
+    <changeSet id="20160328203537-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="lyrics_translation_id"
+                                 baseTableName="composition"
+                                 constraintName="fk_composition_lyricstranslation_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="translation_key"/>
+
+        <addForeignKeyConstraint baseColumnNames="composer_id"
+                                 baseTableName="composition"
+                                 constraintName="fk_composition_composer_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="composer"/>
+
+    </changeSet>
+</databaseChangeLog>

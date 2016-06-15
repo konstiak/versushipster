@@ -1,0 +1,29 @@
+{
+    "versushipsterApp": {
+        "member" : {
+            "home": {
+                "title": "Members",
+                "createLabel": "Vytvořit Member",
+                "createOrEditLabel": "Vytvořit nebo upravit Member",
+                "search": "Vyhledat Member"
+            },
+            "created": "Byl vytvořen potomek entity Member s identifikátorem {{ param }}",
+            "updated": "Potomek entity Member s identifikátorem {{ param }} byl upravený.",
+            "deleted": "Potomek entity Member s identifikátorem {{ param }} bol smazaný.",
+            "delete": {
+                "question": "Jste si jisti, že chcete smazat Member {{ id }}?"
+            },
+            "detail": {
+                "title": "Member"
+            },
+            "firstName": "First Name",
+            "secondName": "Second Name",
+            "active": "Active",
+            "voice": "Voice",
+            "photo": "Photo",
+            "memberFrom": "Member From",
+            "memberTo": "Member To",
+            "description": "Description"
+        }
+    }
+}

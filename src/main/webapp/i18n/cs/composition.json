@@ -1,0 +1,28 @@
+{
+    "versushipsterApp": {
+        "composition" : {
+            "home": {
+                "title": "Compositions",
+                "createLabel": "Vytvořit Composition",
+                "createOrEditLabel": "Vytvořit nebo upravit Composition",
+                "search": "Vyhledat Composition"
+            },
+            "created": "Byl vytvořen potomek entity Composition s identifikátorem {{ param }}",
+            "updated": "Potomek entity Composition s identifikátorem {{ param }} byl upravený.",
+            "deleted": "Potomek entity Composition s identifikátorem {{ param }} bol smazaný.",
+            "delete": {
+                "question": "Jste si jisti, že chcete smazat Composition {{ id }}?"
+            },
+            "detail": {
+                "title": "Composition"
+            },
+            "title": "Title",
+            "originalLyrics": "Original Lyrics",
+            "video": "Video",
+            "lyricsTranslation": "Lyrics Translation",
+            "composer": "Composer",
+            "program": "Program",
+            "event": "Event"
+        }
+    }
+}

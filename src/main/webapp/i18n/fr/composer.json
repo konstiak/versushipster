@@ -1,0 +1,24 @@
+{
+    "versushipsterApp": {
+        "composer" : {
+            "home": {
+                "title": "Composers",
+                "createLabel": "Créer un nouveau Composer",
+                "createOrEditLabel": "Créer ou éditer un Composer",
+                "search": "Recherche pour Composer"
+            },
+            "created": "Un nouveau Composer a été créé avec l'identifiant {{ param }}",
+            "updated": "Le Composer avec l'identifiant {{ param }} a été mis à jour",
+            "deleted": "Le Composer avec l'identifiant {{ param }} a été supprimé",
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Composer {{ id }} ?"
+            },
+            "detail": {
+                "title": "Composer"
+            },
+            "name": "Name",
+            "composition": "Composition",
+            "description": "Description"
+        }
+    }
+}

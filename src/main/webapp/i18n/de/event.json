@@ -1,0 +1,30 @@
+{
+    "versushipsterApp": {
+        "event" : {
+            "home": {
+                "title": "Events",
+                "createLabel": "Event erstellen",
+                "createOrEditLabel": "Event erstellen oder bearbeiten",
+                "search": "Suche nach Event"
+            },
+            "created": "Event erstellt mit ID {{ param }}",
+            "updated": "Event aktualisiert mit ID {{ param }}",
+            "deleted": "Event gelöscht mit ID {{ param }}",
+            "delete": {
+                "question": "Soll Event {{ id }} wirklich dauerhaft gelöscht werden?"
+            },
+            "detail": {
+                "title": "Event"
+            },
+            "dateTime": "Date Time",
+            "type": "Type",
+            "publicEvent": "Public Event",
+            "publishProgram": "Publish Program",
+            "poster": "Poster",
+            "program": "Program",
+            "title": "Title",
+            "place": "Place",
+            "description": "Description"
+        }
+    }
+}

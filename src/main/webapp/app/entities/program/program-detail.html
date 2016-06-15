@@ -1,0 +1,28 @@
+
+<div>
+    <h2><span translate="versushipsterApp.program.detail.title">Program</span> {{vm.program.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span translate="versushipsterApp.program.active">Active</span></dt>
+        <dd>
+            <span>{{vm.program.active}}</span>
+        </dd>
+        <dt><span translate="versushipsterApp.program.composition">Composition</span></dt>
+        <dd>
+            <span ng-repeat="composition in vm.program.compositions">
+                <a ui-sref="composition-detail({id: {{composition.id}}})">{{composition.id}}</a>{{$last ? '' : ', '}}
+            </span>
+        </dd>
+        <dt><span translate="versushipsterApp.program.name">Name</span></dt>
+        <dd>
+            <a ui-sref="translation-key-detail({id:vm.program.name.id})">{{vm.program.name.key}}</a>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            onclick="window.history.back()"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+</div>

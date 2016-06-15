@@ -1,0 +1,28 @@
+{
+    "versushipsterApp": {
+        "composition" : {
+            "home": {
+                "title": "Compositions",
+                "createLabel": "Create a new Composition",
+                "createOrEditLabel": "Create or edit a Composition",
+                "search": "Search for Composition"
+            },
+            "created": "A new Composition is created with identifier {{ param }}",
+            "updated": "A Composition is updated with identifier {{ param }}",
+            "deleted": "A Composition is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Composition {{ id }}?"
+            },
+            "detail": {
+                "title": "Composition"
+            },
+            "title": "Title",
+            "originalLyrics": "Original Lyrics",
+            "video": "Video",
+            "lyricsTranslation": "Lyrics Translation",
+            "composer": "Composer",
+            "program": "Program",
+            "event": "Event"
+        }
+    }
+}

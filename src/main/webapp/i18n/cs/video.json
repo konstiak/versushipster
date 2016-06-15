@@ -1,0 +1,24 @@
+{
+    "versushipsterApp": {
+        "video" : {
+            "home": {
+                "title": "Videos",
+                "createLabel": "Vytvořit Video",
+                "createOrEditLabel": "Vytvořit nebo upravit Video",
+                "search": "Vyhledat Video"
+            },
+            "created": "Byl vytvořen potomek entity Video s identifikátorem {{ param }}",
+            "updated": "Potomek entity Video s identifikátorem {{ param }} byl upravený.",
+            "deleted": "Potomek entity Video s identifikátorem {{ param }} bol smazaný.",
+            "delete": {
+                "question": "Jste si jisti, že chcete smazat Video {{ id }}?"
+            },
+            "detail": {
+                "title": "Video"
+            },
+            "name": "Name",
+            "url": "Url",
+            "composition": "Composition"
+        }
+    }
+}

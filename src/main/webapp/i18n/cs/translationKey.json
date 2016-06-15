@@ -1,0 +1,23 @@
+{
+    "versushipsterApp": {
+        "translationKey" : {
+            "home": {
+                "title": "Translation Keys",
+                "createLabel": "Vytvořit Translation Key",
+                "createOrEditLabel": "Vytvořit nebo upravit Translation Key",
+                "search": "Vyhledat Translation Key"
+            },
+            "created": "Byl vytvořen potomek entity Translation Key s identifikátorem {{ param }}",
+            "updated": "Potomek entity Translation Key s identifikátorem {{ param }} byl upravený.",
+            "deleted": "Potomek entity Translation Key s identifikátorem {{ param }} bol smazaný.",
+            "delete": {
+                "question": "Jste si jisti, že chcete smazat Translation Key {{ id }}?"
+            },
+            "detail": {
+                "title": "Translation Key"
+            },
+            "key": "Key",
+            "translation": "Translation"
+        }
+    }
+}

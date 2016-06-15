@@ -1,0 +1,12 @@
+{
+    "versushipsterApp": {
+        "LocaleType" : {
+            "null": "",
+            "EN": "EN",
+            "DE": "DE",
+            "FR": "FR",
+            "CS": "CS",
+            "SK": "SK"
+        }
+    }
+}

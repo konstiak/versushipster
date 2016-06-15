@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+    <!--
+        Added the constraints for entity Event.
+    -->
+    <changeSet id="20160328203539-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="events_id"
+                                 baseTableName="event_program"
+                                 constraintName="fk_event_program_composition_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="event"/>
+        <addForeignKeyConstraint baseColumnNames="programs_id"
+                                 baseTableName="event_program"
+                                 constraintName="fk_event_program_event_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="composition"/>
+        
+        <addForeignKeyConstraint baseColumnNames="title_id"
+                                 baseTableName="event"
+                                 constraintName="fk_event_title_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="translation_key"/>
+
+        <addForeignKeyConstraint baseColumnNames="place_id"
+                                 baseTableName="event"
+                                 constraintName="fk_event_place_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="translation_key"/>
+
+        <addForeignKeyConstraint baseColumnNames="description_id"
+                                 baseTableName="event"
+                                 constraintName="fk_event_description_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="translation_key"/>
+
+    </changeSet>
+</databaseChangeLog>

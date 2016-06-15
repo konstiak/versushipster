@@ -1,0 +1,76 @@
+<div>
+    <h2 translate="versushipsterApp.event.home.title">Events</h2>
+    <jhi-alert></jhi-alert>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4 no-padding-left">
+                <button class="btn btn-primary" ui-sref="event.new" >
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <span  translate="versushipsterApp.event.home.createLabel">
+                        Create new Event
+                    </span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="table-responsive">
+        <table class="jh-table table table-striped">
+            <thead>
+                <tr jh-sort="vm.predicate" ascending="vm.reverse" callback="vm.reset()">
+                    <th jh-sort-by="id"><span translate="global.field.id">ID</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="dateTime"><span translate="versushipsterApp.event.dateTime">Date Time</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="type"><span translate="versushipsterApp.event.type">Type</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="publicEvent"><span translate="versushipsterApp.event.publicEvent">Public Event</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="publishProgram"><span translate="versushipsterApp.event.publishProgram">Publish Program</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="poster"><span translate="versushipsterApp.event.poster">Poster</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="title.key"><span translate="versushipsterApp.event.title">Title</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="place.key"><span translate="versushipsterApp.event.place">Place</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="description.key"><span translate="versushipsterApp.event.description">Description</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody infinite-scroll="vm.loadPage(vm.page + 1)" infinite-scroll-disabled="vm.page >= vm.links['last']">
+                <tr ng-repeat="event in vm.events track by event.id">
+                    <td><a ui-sref="event-detail({id:event.id})">{{event.id}}</a></td>
+                    <td>{{event.dateTime | date:'medium'}}</td>
+                    <td translate="{{'versushipsterApp.EventType.' + event.type}}">{{event.type}}</td>
+                    <td>{{event.publicEvent}}</td>
+                    <td>{{event.publishProgram}}</td>
+                    <td>{{event.poster}}</td>
+                    <td>
+                        <a ui-sref="translation-key-detail({id:event.title.id})">{{event.title.key}}</a>
+                    </td>
+                    <td>
+                        <a ui-sref="translation-key-detail({id:event.place.id})">{{event.place.key}}</a>
+                    </td>
+                    <td>
+                        <a ui-sref="translation-key-detail({id:event.description.id})">{{event.description.key}}</a>
+                    </td>
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <button type="submit"
+                                    ui-sref="event-detail({id:event.id})"
+                                    class="btn btn-info btn-sm">
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.view"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="event.edit({id:event.id})"
+                                    class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.edit"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="event.delete({id:event.id})"
+                                    class="btn btn-danger btn-sm">
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.delete"></span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

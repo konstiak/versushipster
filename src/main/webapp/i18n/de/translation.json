@@ -1,0 +1,24 @@
+{
+    "versushipsterApp": {
+        "translation" : {
+            "home": {
+                "title": "Translations",
+                "createLabel": "Translation erstellen",
+                "createOrEditLabel": "Translation erstellen oder bearbeiten",
+                "search": "Suche nach Translation"
+            },
+            "created": "Translation erstellt mit ID {{ param }}",
+            "updated": "Translation aktualisiert mit ID {{ param }}",
+            "deleted": "Translation gelöscht mit ID {{ param }}",
+            "delete": {
+                "question": "Soll Translation {{ id }} wirklich dauerhaft gelöscht werden?"
+            },
+            "detail": {
+                "title": "Translation"
+            },
+            "locale": "Locale",
+            "translation": "Translation",
+            "key": "Key"
+        }
+    }
+}

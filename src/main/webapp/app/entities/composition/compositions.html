@@ -1,0 +1,66 @@
+<div>
+    <h2 translate="versushipsterApp.composition.home.title">Compositions</h2>
+    <jhi-alert></jhi-alert>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4 no-padding-left">
+                <button class="btn btn-primary" ui-sref="composition.new" >
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <span  translate="versushipsterApp.composition.home.createLabel">
+                        Create new Composition
+                    </span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="table-responsive">
+        <table class="jh-table table table-striped">
+            <thead>
+                <tr jh-sort="vm.predicate" ascending="vm.reverse" callback="vm.reset()">
+                    <th jh-sort-by="id"><span translate="global.field.id">ID</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="title"><span translate="versushipsterApp.composition.title">Title</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="originalLyrics"><span translate="versushipsterApp.composition.originalLyrics">Original Lyrics</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="lyricsTranslation.key"><span translate="versushipsterApp.composition.lyricsTranslation">Lyrics Translation</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="composer.id"><span translate="versushipsterApp.composition.composer">Composer</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody infinite-scroll="vm.loadPage(vm.page + 1)" infinite-scroll-disabled="vm.page >= vm.links['last']">
+                <tr ng-repeat="composition in vm.compositions track by composition.id">
+                    <td><a ui-sref="composition-detail({id:composition.id})">{{composition.id}}</a></td>
+                    <td>{{composition.title}}</td>
+                    <td>{{composition.originalLyrics}}</td>
+                    <td>
+                        <a ui-sref="translation-key-detail({id:composition.lyricsTranslation.id})">{{composition.lyricsTranslation.key}}</a>
+                    </td>
+                    <td>
+                        <a ui-sref="composer-detail({id:composition.composer.id})">{{composition.composer.id}}</a>
+                    </td>
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <button type="submit"
+                                    ui-sref="composition-detail({id:composition.id})"
+                                    class="btn btn-info btn-sm">
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.view"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="composition.edit({id:composition.id})"
+                                    class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.edit"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="composition.delete({id:composition.id})"
+                                    class="btn btn-danger btn-sm">
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.delete"></span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

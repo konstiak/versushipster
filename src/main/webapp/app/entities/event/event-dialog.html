@@ -1,0 +1,100 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()" show-validation>
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myEventLabel" translate="versushipsterApp.event.home.createOrEditLabel">Create or edit a Event</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" ng-show="vm.event.id">
+            <label for="id" translate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.event.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="versushipsterApp.event.dateTime" for="field_dateTime">Date Time</label>
+                <div class="input-group">
+                    <input id="field_dateTime" type="text" class="form-control" name="dateTime" datetime-picker="{{dateformat}}" ng-model="vm.event.dateTime" is-open="vm.datePickerOpenStatus.dateTime"
+                    required  />
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" ng-click="vm.openCalendar('dateTime')"><i class="glyphicon glyphicon-calendar"></i></button>
+                    </span>
+                </div>
+            <div ng-show="editForm.dateTime.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.dateTime.$error.required" translate="entity.validation.required">
+                    This field is required.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.dateTime.$error.ZonedDateTimelocal" translate="entity.validation.ZonedDateTimelocal">
+                    This field should be a date and time.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="versushipsterApp.event.type" for="field_type">Type</label>
+            <select class="form-control" name="type" ng-model="vm.event.type" id="field_type" required>
+                <option value="CONCERT" translate="versushipsterApp.EventType.CONCERT">CONCERT</option>
+                <option value="REHEARSAL" translate="versushipsterApp.EventType.REHEARSAL">REHEARSAL</option>
+                <option value="SUGGESTION" translate="versushipsterApp.EventType.SUGGESTION">SUGGESTION</option>
+            </select>
+            <div ng-show="editForm.type.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.type.$error.required" translate="entity.validation.required">
+                    This field is required.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="versushipsterApp.event.publicEvent" for="field_publicEvent">Public Event</label>
+            <input type="checkbox" class="form-control" name="publicEvent" id="field_publicEvent"
+                    ng-model="vm.event.publicEvent"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="versushipsterApp.event.publishProgram" for="field_publishProgram">Publish Program</label>
+            <input type="checkbox" class="form-control" name="publishProgram" id="field_publishProgram"
+                    ng-model="vm.event.publishProgram"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="versushipsterApp.event.poster" for="field_poster">Poster</label>
+            <input type="text" class="form-control" name="poster" id="field_poster"
+                    ng-model="vm.event.poster"
+                     />
+        </div>
+
+        <div class="form-group">
+            <label translate="versushipsterApp.event.program" for="field_program">Program</label>
+            <select class="form-control" id="field_program" multiple name="program" ng-model="vm.event.programs" ng-options="composition as composition.id for composition in vm.compositions track by composition.id"></select>
+        </div>
+        <div class="form-group">
+            <label translate="versushipsterApp.event.title" for="field_title">Title</label>
+            <select class="form-control" id="field_title" name="title" ng-model="vm.event.title" ng-options="translationKey as translationKey.key for translationKey in vm.titles | orderBy:'id' track by translationKey.id">
+                <option value=""></option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label translate="versushipsterApp.event.place" for="field_place">Place</label>
+            <select class="form-control" id="field_place" name="place" ng-model="vm.event.place" ng-options="translationKey as translationKey.key for translationKey in vm.places | orderBy:'id' track by translationKey.id">
+                <option value=""></option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label translate="versushipsterApp.event.description" for="field_description">Description</label>
+            <select class="form-control" id="field_description" name="description" ng-model="vm.event.description" ng-options="translationKey as translationKey.key for translationKey in vm.descriptions | orderBy:'id' track by translationKey.id">
+                <option value=""></option>
+            </select>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

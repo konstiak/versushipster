@@ -1,0 +1,24 @@
+{
+    "versushipsterApp": {
+        "article" : {
+            "home": {
+                "title": "Articles",
+                "createLabel": "Vytvořit Article",
+                "createOrEditLabel": "Vytvořit nebo upravit Article",
+                "search": "Vyhledat Article"
+            },
+            "created": "Byl vytvořen potomek entity Article s identifikátorem {{ param }}",
+            "updated": "Potomek entity Article s identifikátorem {{ param }} byl upravený.",
+            "deleted": "Potomek entity Article s identifikátorem {{ param }} bol smazaný.",
+            "delete": {
+                "question": "Jste si jisti, že chcete smazat Article {{ id }}?"
+            },
+            "detail": {
+                "title": "Article"
+            },
+            "slug": "Slug",
+            "title": "Title",
+            "content": "Content"
+        }
+    }
+}

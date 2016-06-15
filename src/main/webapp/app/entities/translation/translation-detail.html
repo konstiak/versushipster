@@ -1,0 +1,26 @@
+
+<div>
+    <h2><span translate="versushipsterApp.translation.detail.title">Translation</span> {{vm.translation.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span translate="versushipsterApp.translation.locale">Locale</span></dt>
+        <dd>
+            <span translate="{{'versushipsterApp.LocaleType.' + vm.translation.locale}}">{{vm.translation.locale}}</span>
+        </dd>
+        <dt><span translate="versushipsterApp.translation.translation">Translation</span></dt>
+        <dd>
+            <span>{{vm.translation.translation}}</span>
+        </dd>
+        <dt><span translate="versushipsterApp.translation.key">Key</span></dt>
+        <dd>
+            <a ui-sref="translation-key-detail({id:vm.translation.key.id})">{{vm.translation.key.key}}</a>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            onclick="window.history.back()"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+</div>

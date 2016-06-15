@@ -1,0 +1,10 @@
+{
+    "versushipsterApp": {
+        "EventType" : {
+            "null": "",
+            "CONCERT": "CONCERT",
+            "REHEARSAL": "REHEARSAL",
+            "SUGGESTION": "SUGGESTION"
+        }
+    }
+}
