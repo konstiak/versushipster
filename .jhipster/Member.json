@@ -1,0 +1,64 @@
+{
+  "relationships": [
+    {
+      "relationshipId": 1,
+      "relationshipName": "description",
+      "otherEntityName": "translationKey",
+      "relationshipType": "one-to-one",
+      "otherEntityField": "key",
+      "ownerSide": true,
+      "otherEntityRelationshipName": "member"
+    }
+  ],
+  "fields": [
+    {
+      "fieldId": 1,
+      "fieldName": "firstName",
+      "fieldType": "String",
+      "fieldValidateRules": [
+        "required"
+      ]
+    },
+    {
+      "fieldId": 2,
+      "fieldName": "secondName",
+      "fieldType": "String",
+      "fieldValidateRules": [
+        "required"
+      ]
+    },
+    {
+      "fieldId": 3,
+      "fieldName": "active",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldId": 4,
+      "fieldName": "voice",
+      "fieldType": "VoiceType",
+      "fieldValues": "SOPRANO,MEZZOSOPRANO,CONTRALTO,ALTO,COUNTERTENOR,TENOR,BARITONE,BASS",
+      "fieldValidateRules": [
+        "required"
+      ]
+    },
+    {
+      "fieldId": 5,
+      "fieldName": "photo",
+      "fieldType": "String"
+    },
+    {
+      "fieldId": 6,
+      "fieldName": "memberFrom",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldId": 7,
+      "fieldName": "memberTo",
+      "fieldType": "LocalDate"
+    }
+  ],
+  "changelogDate": "20160328203540",
+  "dto": "no",
+  "pagination": "pagination",
+  "service": "no"
+}

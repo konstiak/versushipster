@@ -1,0 +1,34 @@
+{
+  "relationships": [
+    {
+      "relationshipId": 1,
+      "relationshipName": "key",
+      "otherEntityName": "translationKey",
+      "relationshipType": "many-to-one",
+      "otherEntityField": "key"
+    }
+  ],
+  "fields": [
+    {
+      "fieldId": 1,
+      "fieldName": "locale",
+      "fieldType": "LocaleType",
+      "fieldValues": "EN,DE,FR,CS,SK",
+      "fieldValidateRules": [
+        "required"
+      ]
+    },
+    {
+      "fieldId": 2,
+      "fieldName": "translation",
+      "fieldType": "String",
+      "fieldValidateRules": [
+        "required"
+      ]
+    }
+  ],
+  "changelogDate": "20160328203535",
+  "dto": "no",
+  "pagination": "pagination",
+  "service": "no"
+}

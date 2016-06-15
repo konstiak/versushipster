@@ -1,0 +1,77 @@
+{
+  "relationships": [
+    {
+      "relationshipId": 1,
+      "relationshipName": "program",
+      "otherEntityName": "composition",
+      "relationshipType": "many-to-many",
+      "otherEntityField": "id",
+      "ownerSide": true
+    },
+    {
+      "relationshipId": 2,
+      "relationshipName": "title",
+      "otherEntityName": "translationKey",
+      "relationshipType": "one-to-one",
+      "otherEntityField": "key",
+      "ownerSide": true,
+      "otherEntityRelationshipName": "event"
+    },
+    {
+      "relationshipId": 3,
+      "relationshipName": "place",
+      "otherEntityName": "translationKey",
+      "relationshipType": "one-to-one",
+      "otherEntityField": "key",
+      "ownerSide": true,
+      "otherEntityRelationshipName": "event"
+    },
+    {
+      "relationshipId": 4,
+      "relationshipName": "description",
+      "otherEntityName": "translationKey",
+      "relationshipType": "one-to-one",
+      "otherEntityField": "key",
+      "ownerSide": true,
+      "otherEntityRelationshipName": "event"
+    }
+  ],
+  "fields": [
+    {
+      "fieldId": 1,
+      "fieldName": "dateTime",
+      "fieldType": "ZonedDateTime",
+      "fieldValidateRules": [
+        "required"
+      ]
+    },
+    {
+      "fieldId": 2,
+      "fieldName": "type",
+      "fieldType": "EventType",
+      "fieldValues": "CONCERT,REHEARSAL,SUGGESTION",
+      "fieldValidateRules": [
+        "required"
+      ]
+    },
+    {
+      "fieldId": 3,
+      "fieldName": "publicEvent",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldId": 4,
+      "fieldName": "publishProgram",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldId": 5,
+      "fieldName": "poster",
+      "fieldType": "String"
+    }
+  ],
+  "changelogDate": "20160328203539",
+  "dto": "no",
+  "pagination": "infinite-scroll",
+  "service": "no"
+}

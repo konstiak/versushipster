@@ -1,0 +1,30 @@
+{
+  "relationships": [
+    {
+      "relationshipId": 1,
+      "relationshipName": "composition",
+      "otherEntityName": "composition",
+      "relationshipType": "many-to-one",
+      "otherEntityField": "id"
+    }
+  ],
+  "fields": [
+    {
+      "fieldId": 1,
+      "fieldName": "name",
+      "fieldType": "String",
+      "fieldValidateRules": [
+        "required"
+      ]
+    },
+    {
+      "fieldId": 2,
+      "fieldName": "url",
+      "fieldType": "String"
+    }
+  ],
+  "changelogDate": "20160328203542",
+  "dto": "no",
+  "pagination": "infinite-scroll",
+  "service": "no"
+}

@@ -1,0 +1,32 @@
+{
+  "relationships": [
+    {
+      "relationshipId": 1,
+      "relationshipName": "composition",
+      "otherEntityName": "composition",
+      "relationshipType": "many-to-many",
+      "otherEntityField": "id",
+      "ownerSide": true
+    },
+    {
+      "relationshipId": 2,
+      "relationshipName": "name",
+      "otherEntityName": "translationKey",
+      "relationshipType": "one-to-one",
+      "otherEntityField": "key",
+      "ownerSide": true,
+      "otherEntityRelationshipName": "program"
+    }
+  ],
+  "fields": [
+    {
+      "fieldId": 1,
+      "fieldName": "active",
+      "fieldType": "Boolean"
+    }
+  ],
+  "changelogDate": "20160328203538",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no"
+}

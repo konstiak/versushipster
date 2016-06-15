@@ -1,0 +1,34 @@
+{
+  "relationships": [
+    {
+      "relationshipId": 1,
+      "relationshipName": "composition",
+      "otherEntityName": "composition",
+      "relationshipType": "one-to-many",
+      "otherEntityRelationshipName": "composer"
+    },
+    {
+      "relationshipId": 2,
+      "relationshipName": "description",
+      "otherEntityName": "translationKey",
+      "relationshipType": "one-to-one",
+      "otherEntityField": "key",
+      "ownerSide": true,
+      "otherEntityRelationshipName": "composer"
+    }
+  ],
+  "fields": [
+    {
+      "fieldId": 1,
+      "fieldName": "name",
+      "fieldType": "String",
+      "fieldValidateRules": [
+        "required"
+      ]
+    }
+  ],
+  "changelogDate": "20160328203536",
+  "dto": "no",
+  "pagination": "infinite-scroll",
+  "service": "no"
+}

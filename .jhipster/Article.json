@@ -1,0 +1,36 @@
+{
+  "relationships": [
+    {
+      "relationshipId": 1,
+      "relationshipName": "title",
+      "otherEntityName": "translationKey",
+      "relationshipType": "one-to-one",
+      "otherEntityField": "key",
+      "ownerSide": true,
+      "otherEntityRelationshipName": "article"
+    },
+    {
+      "relationshipId": 2,
+      "relationshipName": "content",
+      "otherEntityName": "translationKey",
+      "relationshipType": "one-to-one",
+      "otherEntityField": "key",
+      "ownerSide": true,
+      "otherEntityRelationshipName": "article"
+    }
+  ],
+  "fields": [
+    {
+      "fieldId": 1,
+      "fieldName": "slug",
+      "fieldType": "String",
+      "fieldValidateRules": [
+        "required"
+      ]
+    }
+  ],
+  "changelogDate": "20160328203541",
+  "dto": "no",
+  "pagination": "pagination",
+  "service": "no"
+}

@@ -1,0 +1,62 @@
+{
+  "relationships": [
+    {
+      "relationshipId": 1,
+      "relationshipName": "video",
+      "otherEntityName": "video",
+      "relationshipType": "one-to-many",
+      "otherEntityRelationshipName": "composition"
+    },
+    {
+      "relationshipId": 2,
+      "relationshipName": "lyricsTranslation",
+      "otherEntityName": "translationKey",
+      "relationshipType": "one-to-one",
+      "otherEntityField": "key",
+      "ownerSide": true,
+      "otherEntityRelationshipName": "composition"
+    },
+    {
+      "relationshipId": 3,
+      "relationshipName": "composer",
+      "otherEntityName": "composer",
+      "relationshipType": "many-to-one",
+      "otherEntityField": "id"
+    },
+    {
+      "relationshipId": 4,
+      "relationshipName": "program",
+      "otherEntityName": "program",
+      "relationshipType": "many-to-many",
+      "ownerSide": false,
+      "otherEntityRelationshipName": "composition"
+    },
+    {
+      "relationshipId": 5,
+      "relationshipName": "event",
+      "otherEntityName": "event",
+      "relationshipType": "many-to-many",
+      "ownerSide": false,
+      "otherEntityRelationshipName": "program"
+    }
+  ],
+  "fields": [
+    {
+      "fieldId": 1,
+      "fieldName": "title",
+      "fieldType": "String",
+      "fieldValidateRules": [
+        "required"
+      ]
+    },
+    {
+      "fieldId": 2,
+      "fieldName": "originalLyrics",
+      "fieldType": "String"
+    }
+  ],
+  "changelogDate": "20160328203537",
+  "dto": "no",
+  "pagination": "infinite-scroll",
+  "service": "no"
+}
