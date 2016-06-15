@@ -19,9 +19,9 @@ spring:
             enabled: false # we use gulp + BrowserSync for livereload
     datasource:
         url: jdbc:postgresql://localhost:5432/versushipster
-        name:
+        name: versushipster
         username: versushipster
-        password:
+        password: versushipster
     jpa:
         database-platform: cz.ensembleversus.webapp.domain.util.FixedPostgreSQL82Dialect
         database: POSTGRESQL
